@@ -1,0 +1,21 @@
+snum {
+  current_process_diagnostics = 'solution'
+  hkl {
+    hkl_stat_file = '/media/norwid2/tDebian10/home/norwid/olex2/2019-09-25_ANTCEN17_03/ANTCEN17_hkl.hkl'
+  }
+  solution {
+    current_atomic_volume = '16.9'
+  }
+  refinement {
+    last_R1 = 'Solution'
+    last_wR2 = 'Solution'
+    program = XL XH ShelXH-1997 *ShelXL ShelXL-1997 'olex2.refine' Unknown
+    method = '*Least Squares' CGLS 'Gauss-Newton' 'Levenberg-Marquardt' \
+             'Full Matrix' Unknown
+    update_weight = False
+    suggested_weight = '0.1 0'
+  }
+  history {
+    current_node = 'd0aefd1cdff219bf7907ab1295b26396'
+  }
+}

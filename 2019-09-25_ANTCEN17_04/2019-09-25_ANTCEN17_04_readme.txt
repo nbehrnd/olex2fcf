@@ -1,0 +1,70 @@
+# name:   2019-09-25_ANTCEN17_04_README.txt
+# author: nbehrnd@yahoo.com
+# datum:  2019-09-25 (YYYY-MM-DD)
+
+Again attempting to re-refine or resolve from scratch CCDC's CSD model
+about anthracene ANTCEN17 (pure, no co-crystal, no disorder; complete
+set of C and H atoms).  Contrasting to 2019-09-25_ANTCEN17_03, though,
+the information of table 5 in Marciniak2002.pdf is harvested completely
+-- now including both Fobs and Fcalc, similar to a .fcf file instead of
+an .hkl file.
+
+Background: Horst Puschmann mentions Olex2 were capable to access hkl-
+information from the structure file .fcf. [1]  On paper, it seems a
+feasable transformation, especially because the earlier question has
+a .fcf as test file (s286p.fcf).
+
+The two pages of interest in the publication Marciniak2002.pdf were
+extracted (inkscape), deposit as individual .pdf (ISO A4, in landscape
+orientation) to [2] yiedling two .txt files.  Footer and empty lines of
+the two files joined were removed and an intermediate .csv about the
+complete table was exported.  The table was reorganized to contain one
+stream of h, k, ell; Fobs, Fcalc, sigma only.  The last three entries
+were divided by 10 (ten) to yield the original values provided by ShelX,
+and formatted to contain two decimals.
+
+Following the pattern of s286p.fcf, a new structure factor file
+
+Marciniak2002_fcf_header_addition.fcf
+
+was created, including information about unit cell dimension and space
+group symmetry, for example.
+
+This .fcf and the .res file (exported by Mercurt 3.9 while reading the
+corresponding CCDC .cif file) were copy-pasted into the sub-folder
+
+start_files_remaned
+
+while the other files were stashed into the sub-folder
+
+preparations
+
+The start files, renamed for consistency, are backed-up in sub-folder
+
+start_files_remaned
+
++ The attempt to use a .res and a .fcf renamed as .hkl (approach /with/
+  a header in the .fcf) for Olex2 (1.3alpha release, September 10, 2019)
+  did not work.  Olex2 tries in vain to generate a new .hkl file, and
+  probably a new .ins file refering to the (potential) reindexation of
+  information, too.
+
++ The attempt to use a .res and a .fcf file renamed as .hkl /lacking/ a
+  header information in the then .hkl file allows to access the data.
+  However, even a tiny refinement (5LS with ShelX) renders the already
+  flattened ADP negative; only the hydrogen atoms remain in Mercury's
+  display a sphere; however, with different diamater [sic!].
+
++ Olex2's new option to suggest a space group symmetry more suitable,
+  than the currently dialed one, fails on this set of data.  Assuming
+  "a start in P1 still may be brought to higher symmetry [e.g.,PLATON's
+  Lepage]" equally fails; no successcul structure solution with either
+  1) ShelXS' direct methods, 2) ShelXT, or 3) Olex2 charge flipping.
+
+Deposit to the attention the author of the reply how to bring .fcf-based
+information to Olex2, Horst Puschmann.
+
+[1] https://www.xrayforum.co.uk/viewtopic.php?f=11&t=2746&p=11096#p11096
+[2] https://www.ocrconvert.com/
+
+END.

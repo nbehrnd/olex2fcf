@@ -1,0 +1,39 @@
+snum {
+  current_process_diagnostics = 'data'
+  hkl {
+    hkl_stat_file = '/media/norwid2/tDebian10/home/norwid/olex2/just_so/ANTCEN17_hkl.hkl'
+  }
+  solution {
+    program = ShelXS ShelXS-1997 ShelXS-1986 XS XT *ShelXT 'olex2.solve' XM \
+              ShelXD ShelXD-1997 SIR2002 SIR2004 SIR2008 SIR2011 Superflip \
+              Unknown ShelXS-2013 ShelXS86 ShelXD-2013
+    method = 'Dual Space' 'Charge Flipping' 'Direct Methods' \
+             'Patterson Method' 'Structure Expansion' '*Intrinsic Phasing' \
+             Unknown
+    current_atomic_volume = '16.9'
+  }
+  refinement {
+    max_shift_over_esd = '3.757'
+    max_shift_over_esd_atom = 'C00M'
+    max_shift_site = '0.327'
+    max_shift_site_atom = 'C00H'
+    max_shift_u = '0.046'
+    max_shift_u_atom = 'C00M'
+    max_peak = '0.70'
+    max_hole = '-0.77'
+    goof = '0.293'
+    flack_str = '0'
+    last_R1 = '0.1718'
+    last_wR2 = '0.3278'
+    program = XL XH ShelXH-1997 *ShelXL ShelXL-1997 'olex2.refine' Unknown
+    method = '*Least Squares' CGLS 'Gauss-Newton' 'Levenberg-Marquardt' \
+             'Full Matrix' Unknown
+    max_peaks = '15'
+    update_weight = False
+    suggested_weight = '0 0'
+    refine_extinction = '0'
+  }
+  history {
+    current_node = 'ddc692367554c2766fa32c08b3e36b88'
+  }
+}

@@ -1,0 +1,20 @@
+# name:   2019-09-25_ANTCEN17_03_README.txt
+# author: nbehrnd@yahoo.com
+# datum:  2019-09-25 (YYYY-MM-DD)
+
+Using the (thought to be) recovered hkl about ANTCEN, and starting
+with Mercury's export of the ANTCEN17 .cif as res; however, the
+lattice constants a, b, c, beta were altered to be now about P2(1)/c
+as the the earlier P2(1)/n model.  The old "LATT 1" instruction was
+retained as exported by Mercury.
+
+The .hkl file contains h, k, ell; intensity Fobs, sigma (Fobs) -- as
+provided by Table 5 of the original publication about ANTCEN17.  The
+numerical data of the two last entries (two decimals) printed in the
+paper were divided by 10 to obtain the initially data put into this
+table / file.
+
+The .res file is an export of the CCDC .cif file about ANTCEN17 as
+provided by CCDC Mercury (free version 3.9).
+
+END

@@ -1,0 +1,37 @@
+snum {
+  current_process_diagnostics = "refinement"
+  solution {
+    program = ShelXS ShelXS-1997 ShelXS-1986 XS XT ShelXT 'olex2.solve' XM \
+              ShelXD ShelXD-1997 SIR2002 SIR2004 SIR2008 SIR2011 Superflip \
+              *Unknown ShelXS-2013 ShelXS86 ShelXD-2013
+    method = 'Dual Space' 'Charge Flipping' 'Direct Methods' \
+             'Patterson Method' 'Structure Expansion' '*Intrinsic Phasing' \
+             Unknown
+    current_atomic_volume = 16.9
+  }
+  refinement {
+    max_shift_over_esd = -0.126
+    max_shift_over_esd_atom = "H4A"
+    max_shift_site = 0
+    max_shift_site_atom = "0"
+    max_shift_u = 0
+    max_shift_u_atom = "0"
+    max_peak = 0.11
+    max_hole = -0.1
+    goof = 0.878
+    flack_str = "0"
+    last_R1 = "0.1394"
+    last_wR2 = "0.3174"
+    program = XL XH ShelXH-1997 *ShelXL ShelXL-1997 'olex2.refine' Unknown
+    method = '*Least Squares' CGLS 'Gauss-Newton' 'Levenberg-Marquardt' \
+             'Full Matrix' Unknown
+    max_cycles = '5'
+    max_peaks = '5'
+    update_weight = False
+    suggested_weight = 0.2 0
+    refine_extinction = 0
+  }
+  history {
+    current_node = "7ead49bbdfc38388d0aa8ea1753472f4"
+  }
+}
